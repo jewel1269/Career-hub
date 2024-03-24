@@ -9,6 +9,7 @@ const Navbar = () => {
     <a className="btn btn-ghost text-3xl">Career Hub</a>
   </div>
   <div id='sidebar' className="navbar-center hidden items-center gap-7 text-xl justify-center lg:flex">
+      <NavLink to={'/'}><a>Home</a></NavLink>
       <NavLink to={'/statistics'}><a>Statistics</a></NavLink>
       <NavLink to={'/applied'}><a>Applied Jobs</a></NavLink>
       <NavLink to={'/blog'}><a>Blog</a></NavLink>

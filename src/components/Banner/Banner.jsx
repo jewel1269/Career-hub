@@ -14,7 +14,7 @@ const Banner = () => {
                     </div>
 
                     <div className="w-[650px] mt-3 h-[550px]">
-                        <img src="/src/assets/images/user.png" alt="" />
+                        <img className="h-[598px]" src="/src/assets/images/jewel.png" alt="" />
                     </div>
 
                 </div>

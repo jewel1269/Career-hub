@@ -11,10 +11,9 @@ const Root = () => {
         <div>
             <div>
                 <Navbar></Navbar>
-                <Banner></Banner>
-                <MainBody></MainBody>
-                <FutureJob></FutureJob>
+               
                 <Outlet></Outlet>
+
                 <Footer></Footer>
             </div>
         </div>

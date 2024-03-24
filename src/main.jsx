@@ -7,32 +7,45 @@ import Root from './components/Root/Root.jsx'
 import Statistics from './components/Statistics/Statistics.jsx'
 import Applied from './components/Navbar/Applied/Applied.jsx'
 import Blog from './components/Navbar/Blog/Blog.jsx'
+import Home from './components/Home.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Root></Root>,
+    element: <Root></Root>,
     children: [
       {
-        path: '/statistics',
-        element: <Statistics></Statistics>
+        path: '/',
+        element: <Home></Home>
       },
-      {
-        path: '/applied',
-        element: <Applied></Applied>
-      },
-      {
-        path:'/blog',
-        element: <Blog></Blog>
-      }
-    ]
+  {
+    path: '/statistics',
+    element: <Statistics></Statistics>
+  },
+  {
+    path: 'statistics/:id',
+    element: <Statistics></Statistics>
+  },
+  {
+    path: 'applied',
+    element: <Applied></Applied>
+  },
+  {
+    path: 'applied/:id',
+    element: <Applied></Applied>
+  },
+  {
+    path: 'blog',
+    element: <Blog></Blog>
+  }
+]
   },
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )

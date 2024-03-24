@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import useData from "../Statistics/Hooks/useData";
 
 const FutureJob = () => {
-    const [cards, setCards] = useState([]);
+    const {cards} = useData();
 
-    useEffect(() => {
-        fetch('/jobs.json')
-            .then(res => res.json())
-            .then(data => setCards(data))
-            .catch(error => console.error('Error fetching jobs:', error));
-    }, []);
+    
 
     return (
         <div>
